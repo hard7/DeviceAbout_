@@ -58,8 +58,9 @@ namespace DeviceAbout {
 //        bool tccDriver;
         bool unifiedAddressing;
         int pciBusID, pciDeviceID;
-        std::vector<int> pearToPearAccessFrom;
-        std::vector<int> pearToPearAccessTo;
+
+//        std::vector<int> pearToPearAccessFrom;
+//        std::vector<int> pearToPearAccessTo;
     };
 
 
@@ -67,13 +68,13 @@ namespace DeviceAbout {
     public:
         typedef std::vector<CudaDeviceAbout>::const_iterator const_iterator;
 
-        CudaDevices();
-        const_iterator begin() const;
-        const_iterator end() const;
-        int deviceCount() const;
+//        CudaDevices();
+        static const_iterator begin();
+        static const_iterator end();
+        static int deviceCount();
     };
 
-} // namespace DeviceAbout
+} // namespace DeviceAbout_
 
 
 #endif //__DEVICE_ABOUT_H__
